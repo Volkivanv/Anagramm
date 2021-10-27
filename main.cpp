@@ -21,16 +21,12 @@ bool anagramm(std::string fWord, std::string sWord){
             it ->second++;
         }
     }
-    if(firstWord.size()!=secondWord.size()) {
-        return false;
+    if(firstWord==secondWord) {
+        return true;
     } else {
-        auto iter = secondWord.begin();
-        for (auto it = firstWord.begin(); it != firstWord.end(); ++it) {
-            if((it -> first != iter -> first)||(it -> second != iter -> second)) return false;
-            ++iter;
-        }
+        return false;
     }
-    return true;
+
 }
 
 int main() {
